@@ -1,0 +1,44 @@
+@use "../vars/colors" as *;
+@use "../vars/radius" as *;
+form {
+  background-color: $bg-main-c;
+  height: fit-content;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: $large-r;
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    label {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: $small-r;
+      border: 1px solid $border-c;
+      outline-width: 0px;
+      margin: 3px 0px;
+      background-color: transparent;
+      color: $text-main-c;
+    }
+  }
+  button {
+    font-size: 18px;
+    margin-top: 4px;
+    width: 100%;
+    padding: 13px;
+    text-transform: capitalize;
+    background-color: initial;
+    color: $text-main-c;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid $border-c;
+    outline-width: 0px;
+    border-radius: $medium-r;
+  }
+}

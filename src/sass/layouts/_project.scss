@@ -1,0 +1,39 @@
+@use "../vars/colors" as *;
+@use "../vars/radius" as *;
+.project {
+  background-color: $bg-project-c;
+  margin: 5px 0;
+  border-radius: $small-r;
+  padding: 10px;
+  color: $text-second-c;
+
+  .project_title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    text-align: center;
+    color: inherit;
+  }
+  .project_desc {
+    border: 1px solid $border-c;
+    margin: 5px 0px;
+    color: inherit;
+  }
+
+  .project_icons {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    button {
+      border-width: 0;
+      outline-width: 0;
+      cursor: pointer;
+      margin: 0px 2px;
+      background-color: initial;
+    }
+    button.delete {
+      color: $error-c;
+    }
+  }
+}

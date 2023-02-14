@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <script type="module" src="./scripts/index.js"></script>
+    <title>Drag and Drop</title>
+  </head>
+  <body>
+    <template id="fields">
+      <form>
+        <div class="form-control">
+          <label for="title">title</label>
+          <input id="title" type="text" />
+        </div>
+        <div class="form-control">
+          <label for="desc">description</label>
+          <input id="desc" type="text" />
+        </div>
+        <button class="btn">add project</button>
+      </form>
+    </template>
+    <template id="project-list">
+      <div class="projects">
+        <div class="title-header">
+          <h2 class="title"></h2>
+        </div>
+        <div class="projects-list"></div>
+      </div>
+    </template>
+    <template id="project-item">
+      <div class="project" draggable="true">
+        <h2 class="project_title" id="project_title"></h2>
+        <p class="project_desc" id="project_desc"></p>
+        <div class="project_icons">
+         <button class="delete">
+          <i class='bx bx-trash'></i>
+         </button>
+        </div>
+      </div>
+    </template>
+    <template id="popup_template">
+      <div class="popup_container" id="popup_container">
+        <div class="popup">
+          <div class="header">
+            <h4>Alert</h4>
+            <button class="close">
+              <i class="bx bx-x"></i>
+            </button>
+          </div>
+          <div class="content">
+            <p class="desc_popup"></p>
+          </div>
+        </div>
+      </div>
+    </template>
+    <div id="app"></div>
+  </body>
+</html>

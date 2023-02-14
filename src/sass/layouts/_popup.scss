@@ -1,0 +1,48 @@
+@use "../vars/colors" as *;
+@use "../vars/radius" as *;
+.popup_container {
+  position: fixed;
+  inset: 0;
+  background-color: $bg-second-c;
+  z-index: 9999;
+  place-items: center;
+  display: none;
+  .popup {
+    min-width: 270px;
+    max-width: 300px;
+    border-radius: $medium-r;
+    background-color: $bg-main-c;
+    padding: 3px 10px 10px 10px;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $border-c;
+      color: $error-c;
+      .close {
+        border-width: 0;
+        background-color: initial;
+        cursor: pointer;
+        color: $text-main-c;
+        font-size: 22px;
+        position: relative;
+        display: grid;
+        place-items: center;
+        &:hover {
+          color: $error-c;
+        }
+      }
+    }
+    .content {
+      padding: 14px 0px;
+      .desc_popup {
+        font-size: 14px;
+        width: 100%;
+        color: $error-c;
+      }
+    }
+  }
+}
+
+.visible_popup {
+  display: grid !important;
+}
